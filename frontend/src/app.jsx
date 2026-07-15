@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getContract } from "./eth";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export default function App() {
   const [msg, setMsg] = useState("");
@@ -37,6 +38,8 @@ export default function App() {
       <button onClick={read}>Read Message</button>
 
       <p>Stored Message: {stored}</p>
+      
+      <SpeedInsights />
     </div>
   );
 }
